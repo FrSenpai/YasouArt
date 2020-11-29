@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "yasouart"
+  },
+  "targets": {
+    "yasouart": {
+      "hosting": {
+        "yasou-art": [
+          "yasouart"
+        ]
+      }
+    }
+  }
+}

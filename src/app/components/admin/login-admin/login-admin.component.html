@@ -1,0 +1,16 @@
+<div>
+    <h2>Connexion au panel d'administration</h2>
+    <form [formGroup]="loginForm">
+        <div class="elemForm">
+            <label class="lblForm" for="email">Email :</label>
+            <input formControlName="email" type="email" name="email">
+        </div>
+
+        <div class="elemForm">
+            <label class="lblForm" for="password">Mot de passe :</label>
+            <input formControlName="password" type="password" name="password">
+        </div>
+
+        <button id="btnSend" (click)="login()">Connexion</button>
+    </form>
+</div>

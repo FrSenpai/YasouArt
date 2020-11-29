@@ -1,0 +1,29 @@
+<div id="ctnBanner">
+  <img id="banner" src="../../../../assets/banner-hq.jpg" alt="Bannière YasouArt">
+</div>
+<div id="ctnLatestIllustrations">
+  <!-- TODO : Voir si une classe ctnBoxFullWidth serait pas plus utile & cohérent -->
+  <div id="ctnTitleLatestIllustrations">
+    <i class="fas fa-paint-brush"></i>
+    <h2>Illustrations récentes</h2>
+  </div>
+  <div id="ctnSlider" *ngIf='latestIllustrations$ | async; let illustrations;else loading'>
+    <i (click)="prev(illustrations)" class="fas fa-angle-double-left"></i>
+    <div *ngFor="let illustration of illustrations | paginate: configPaginationIllustrations "
+      [ngStyle]="{'background-image': 'url('+ illustration.url_image+')'}" id="ctnLatestIllustration"
+      [class.completed]="illustration.completed">
+      <div id="ctnDataIllustration">
+        <h3>{{illustration.titre}}</h3>
+        <p id="descriptionLatestIllustration">{{illustration.description}}</p>
+        <button id="btnSeeMore" (click)="goToIllustration(illustration.id)">En voir plus</button>
+      </div>
+    </div>
+    <i (click)="next(illustrations)" class="fas fa-angle-double-right"></i>
+  </div>
+
+  <ng-template #loading>
+    <div class="ctnLoading">
+      <div class="loading"></div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,6 @@
+<div *ngIf="illustration$ | async;let illustration" id="ctnIllustration">
+  <h2>{{illustration.titre}}</h2>
+  <figure><img [src]="illustration.url_image" alt="Illustration"></figure>
+  <figcaption> {{illustration.description}} </figcaption>
+  <p>Mis en ligne le : {{illustration.creation_timestamp.toDate()  | date:'dd/mm/yyyy'}}</p>
+</div>

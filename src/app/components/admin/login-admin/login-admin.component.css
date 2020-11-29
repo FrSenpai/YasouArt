@@ -1,0 +1,36 @@
+h2 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.elemForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.lblForm {
+    margin-right: 5px;
+}
+
+#btnSend {
+    background-color: rgb(43, 41, 41);
+    border: 1px rgba(0, 0, 0, 0.65) solid;
+    border-radius: 8px;
+    padding: 7px 10px 7px 10px;
+    color: whitesmoke;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    margin-bottom: 25px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  }
