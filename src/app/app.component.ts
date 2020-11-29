@@ -25,7 +25,7 @@ export class AppComponent {
   @HostListener('window:keyup', ['$event'])
 
   keyEvent(event: KeyboardEvent) {
-    if (event.key === ";" && event.ctrlKey) {
+    if (event.key === "²" && event.ctrlKey) {
       this.route.navigateByUrl('/adminPanel')
     }
   }
