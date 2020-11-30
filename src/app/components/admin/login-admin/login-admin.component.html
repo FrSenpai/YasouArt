@@ -1,16 +1,50 @@
 <div>
-    <h2>Connexion au panel d'administration</h2>
-    <form [formGroup]="loginForm">
-        <div class="elemForm">
-            <label class="lblForm" for="email">Email :</label>
-            <input formControlName="email" type="email" name="email">
+  <h2>Connexion au panel d'administration</h2>
+  <form [formGroup]="loginForm">
+    <!-- Section login -->
+    <div class="ctnBox" *ngIf="!forgotPassword; else forgotPasswordInterface">
+      <div class="elemForm">
+        <label class="lblForm" for="email">Email :</label>
+        <input formControlName="email" type="email" name="email">
+        <div class="ctnErrorMsg" *ngIf="loginForm.get('email').errors && loginForm.get('email').touched">
+          <i class="fas fa-times"></i>
+          <p class="errorMsg">L'email est dans
+            un format incorrect.</p>
         </div>
+      </div>
 
-        <div class="elemForm">
-            <label class="lblForm" for="password">Mot de passe :</label>
-            <input formControlName="password" type="password" name="password">
+      <div class="elemForm">
+        <label class="lblForm" for="password">Mot de passe :</label>
+        <input formControlName="password" type="password" name="password">
+        <div class="ctnErrorMsg" *ngIf="loginForm.get('password').errors && loginForm.get('password').touched">
+          <i class="fas fa-times"></i>
+          <p class="errorMsg">Le format du mot de passe n'est pas valide.</p>
         </div>
+      </div>
+      <span class="lastElem" (click)="this.forgotPasswordDisplay(true)">J'ai oublié mon mot de
+        passe!</span>
+      <button [disabled]="!this.loginForm.valid" class="btnSend" (click)="login()">Connexion</button>
+    </div>
+    <!-- Section forgot password-->
+    <ng-template #forgotPasswordInterface>
+      <div class="ctnBox">
+        <p>Vous semblez avoir perdu votre mot de passe, afin de recevoir un lien de réinitialisation, veuillez remplir
+          votre email ci-dessous. <br>
+          N'oubliez pas de vérifier vos spams.</p>
+        <div class="elemForm">
+          <label class="lblForm" for="email">Email :</label>
+          <input formControlName="email" type="email" name="email">
+          <div class="ctnErrorMsg" *ngIf="loginForm.get('email').errors && loginForm.get('email').touched">
+            <i class="fas fa-times"></i>
+            <p class="errorMsg">L'email est dans
+              un format incorrect.</p>
+          </div>
+        </div>
+        <span class="lastElem" (click)="this.forgotPasswordDisplay(false)">Revenir à la connexion</span>
+        <button [disabled]="!this.loginForm.get('email').valid" class="btnSend" (click)="sendPasswordReset()">Envoyer un
+          lien de réinitialisation</button>
+      </div>
+    </ng-template>
 
-        <button id="btnSend" (click)="login()">Connexion</button>
-    </form>
+  </form>
 </div>

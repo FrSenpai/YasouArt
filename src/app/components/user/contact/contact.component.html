@@ -23,6 +23,6 @@
 
     </div>
 
-    <button id="btnSeeMore" (click)="this.sendMessage()">Envoyer !</button>
+    <button [disabled]="!this.contactForm.valid" id="btnSeeMore" (click)="this.sendMessage()">Envoyer !</button>
   </form>
 </div>
