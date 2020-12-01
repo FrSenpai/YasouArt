@@ -10,6 +10,10 @@ form {
     flex-direction: column;
 }
 
+p {
+    text-align: center;
+}
+
 .elemForm {
     display: flex;
     flex-direction: row;
@@ -41,10 +45,10 @@ form {
   }
 .lastElem {
     margin-bottom: 10px;
+    text-decoration: underline;
 }
 
 .lastElem:hover {
-    text-decoration: underline;
     cursor: pointer;
 }
 

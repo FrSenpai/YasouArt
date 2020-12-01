@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     min-height: 800px;
 }
 
@@ -68,6 +68,10 @@ h2 {
 
     #ctnBio {
         width: 80%;
+    }
+
+    #ctnBox {
+        margin-bottom: 100px;
     }
  } 
 

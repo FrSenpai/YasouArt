@@ -16,6 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 #ctnTitleLatestIllustrations {
@@ -115,9 +116,13 @@ h3 {
 }
 
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   h2 {
     font-size: 25px;
+  }
+
+  #ctnLatestIllustrations {
+    margin-bottom: 75px;
   }
 
 }
