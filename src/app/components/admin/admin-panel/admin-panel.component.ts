@@ -8,7 +8,7 @@ import "firebase/auth";
   styleUrls: ['./admin-panel.component.css']
 })
 export class AdminPanelComponent implements OnInit {
-
+  selectorNav: string;
   constructor(private route: Router) { }
 
   ngOnInit(): void {

@@ -1,10 +1,38 @@
 <div id="ctnBoxAdminPanel">
-  <h1>Panel administrateur</h1>
-  <ul>
-    <li>Gestion des illustrations</li>
-    <li>Gestion de la section "Qui suis-je ?"</li>
-    <li>Gestion du compte administrateur</li>
-    <li>Message(s) privé(s) : </li>
-    <li (click)="logout()">Déconnexion</li>
+  <h1>Bienvenue sur votre panel d'administration !</h1>
+  <ul id="adminNav">
+    <div class="ctnElemNav">
+      <i class="fas fa-paint-brush"></i>
+      <li class="elemAdminNav">Gestion des illustrations</li>
+    </div>
+    <div class="ctnElemNav">
+      <i class="fas fa-atlas"></i>
+      <li class="elemAdminNav">Editer la biographie</li>
+    </div>
+    <div class="ctnElemNav">
+      <i class="fas fa-user-cog"></i>
+      <li class="elemAdminNav">Editer mon compte</li>
+    </div>
+    <div class="ctnElemNav">
+      <i class="far fa-envelope"></i>
+      <li class="elemAdminNav">Message(s) privé(s) : </li>
+    </div>
+    <div class="ctnElemNav">
+      <i class="fas fa-sign-out-alt"></i>
+      <li class="elemAdminNav" (click)="logout()">Déconnexion</li>
+    </div>
+
   </ul>
+  <div *ngIf="selectorNav === 'illustrations'">
+
+  </div>
+  <div *ngIf="selectorNav === 'aboutMe'">
+
+  </div>
+  <div *ngIf="selectorNav === 'account'">
+
+  </div>
+  <div *ngIf="selectorNav === 'privateMessage'">
+
+  </div>
 </div>

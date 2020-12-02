@@ -38,10 +38,8 @@ export class AppComponent {
         this.loginService.user = {
           user: user.uid
         }
-        this.loginService.isAuth = true;
       } else {
         this.loginService.user = null;
-        this.loginService.isAuth = false;
       }
     })
   }

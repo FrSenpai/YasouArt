@@ -36,6 +36,10 @@ nav {
 .elemNav:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: rgba(255, 255, blue, alpha);
+    -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
   }
 
   @media screen and (max-width: 575px) {
