@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { LoginAdminComponent } from './components/admin/login-admin/login-admin.component';
 import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.component';
+import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirePerformanceModule,
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
     NgxPaginationModule,

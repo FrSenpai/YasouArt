@@ -1,5 +1,6 @@
-#ctnBoxIllustration {
+#ctnBoxIllustrations {
     width: 100%;
+    margin-bottom: 80px;
     
 }
 
@@ -98,7 +99,17 @@ h3 {
     background: rgba(0, 0, 0, 0.65) !important;
 }
 
+@media screen and (max-width: 500px) { 
+    #ctnBoxIllustrations {
+        margin-bottom: 100px;
+    }
+ } 
+
 @media screen and (max-width: 400px) { 
+    #ctnBoxIllustrations {
+        margin-bottom: 100px;
+    }
+
     .ctnIllustration {
         width: 100%;
         min-width: 0;
@@ -111,5 +122,11 @@ h3 {
 
     .ctnContentIllustration {
         width: 100%;
+    }
+ } 
+
+ @media screen and (max-width: 350px) { 
+    #ctnBoxIllustrations {
+        margin-bottom: 130px;
     }
  } 

@@ -34,3 +34,19 @@ figcaption {
         width: 80%;
     }
 }
+
+@media screen and (max-width: 800px) { 
+    #ctnIllustration {
+        margin-bottom: 85px;
+    }
+
+
+}
+
+@media screen and (max-width: 300px) { 
+    #ctnIllustration {
+        margin-bottom: 105px;
+    }
+
+
+}

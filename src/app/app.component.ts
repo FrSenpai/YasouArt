@@ -12,6 +12,8 @@ import firebase from "firebase/app";
 import {
   Observable
 } from 'rxjs';
+import "firebase/performance";
+import { env } from 'process';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
