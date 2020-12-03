@@ -1,0 +1,21 @@
+<div id="ctnBox">
+    <h2>Gestions des illustrations</h2>
+    <div id="ctnAllItems">
+        <div id="addItem">
+            <i class="fas fa-plus-circle"></i>
+        </div>
+
+        <div [ngStyle]="{'background-image': 'url('+ item.url_image+')'}" *ngFor="let item of this.galleryItems$ | async" class="item">
+            <div class="ctnContent">
+                <h3> {{item.titre}} </h3>
+                <p> {{item.description}} </p>
+                <ul class="listAdmin">
+                    <li>Voir +</li>
+                    <li>Editer</li>
+                    <li>Supprimer</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>

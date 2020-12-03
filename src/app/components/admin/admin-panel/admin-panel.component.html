@@ -3,11 +3,11 @@
   <ul id="adminNav">
     <div class="ctnElemNav">
       <i class="fas fa-paint-brush"></i>
-      <li class="elemAdminNav">Gestion des illustrations</li>
+      <li (click)="this.setSelectorNav('gallery')" class="elemAdminNav">Gestion des illustrations</li>
     </div>
     <div class="ctnElemNav">
       <i class="fas fa-atlas"></i>
-      <li class="elemAdminNav">Editer la biographie</li>
+      <li (click)="this.setSelectorNav('aboutMe')" class="elemAdminNav">Editer la biographie</li>
     </div>
     <div class="ctnElemNav">
       <i class="fas fa-user-cog"></i>
@@ -23,8 +23,8 @@
     </div>
 
   </ul>
-  <div *ngIf="selectorNav === 'illustrations'">
-
+  <div *ngIf="selectorNav === 'gallery'">
+    <app-edit-gallery></app-edit-gallery>
   </div>
   <div *ngIf="selectorNav === 'aboutMe'">
 

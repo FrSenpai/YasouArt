@@ -20,4 +20,8 @@ export class AdminPanelComponent implements OnInit {
     })
   }
 
+  setSelectorNav(selection): void {
+    this.selectorNav = selection
+  }
+
 }

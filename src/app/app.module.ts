@@ -21,6 +21,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { LoginAdminComponent } from './components/admin/login-admin/login-admin.component';
 import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.component';
 import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
+import { EditGalleryComponent } from './components/admin/edit-gallery/edit-gallery.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@ang
     IllustrationComponent,
     ContactComponent,
     LoginAdminComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    EditGalleryComponent
   ],
   imports: [
     BrowserModule,

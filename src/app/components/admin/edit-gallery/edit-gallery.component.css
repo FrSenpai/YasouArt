@@ -1,0 +1,77 @@
+#ctnBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#ctnAllItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    flex-wrap: wrap;
+}
+
+#addItem {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: rgba(94, 93, 94, 0.253);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
+}
+
+#addItem:hover {
+    background-color: #bbbbbb;
+}
+
+.fa-plus-circle {
+    text-align: center;
+    font-size: 80px;
+}
+
+.fa-plus-circle:hover {
+    color: silver;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.item {
+    width: 250px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.ctnContent {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.ctnContent:hover {
+    opacity: 1;
+}
+
+.listAdmin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+}
