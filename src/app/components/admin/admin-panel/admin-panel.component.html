@@ -15,7 +15,7 @@
     </div>
     <div class="ctnElemNav">
       <i class="far fa-envelope"></i>
-      <li class="elemAdminNav">Message(s) privé(s) : </li>
+      <li class="elemAdminNav">Message(s) privé(s) : <span *ngIf="this.privateMessage$ | async;let nbPm"> {{nbPm.length}} </span> </li>
     </div>
     <div class="ctnElemNav">
       <i class="fas fa-sign-out-alt"></i>
