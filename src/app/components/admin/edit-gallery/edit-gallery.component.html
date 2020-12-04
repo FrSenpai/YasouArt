@@ -2,20 +2,21 @@
     <h2>Gestions des illustrations</h2>
     <div id="ctnAllItems">
         <div id="addItem">
-            <i class="fas fa-plus-circle"></i>
+            <i class="far fa-plus-square"></i>
         </div>
 
-        <div [ngStyle]="{'background-image': 'url('+ item.url_image+')'}" *ngFor="let item of this.galleryItems$ | async" class="item">
+        <div [ngStyle]="{'background-image': 'url('+ item.url_image+')'}" *ngFor="let item of this.galleryItems$ | async| paginate: configPagination" class="item">
             <div class="ctnContent">
                 <h3> {{item.titre}} </h3>
-                <p> {{item.description}} </p>
+                <p class="descContent"> {{item.description}} </p>
                 <ul class="listAdmin">
-                    <li>Voir +</li>
-                    <li>Editer</li>
-                    <li>Supprimer</li>
+                    <li class="elemList">Voir +</li>
+                    <li class="elemList">Editer</li>
+                    <li class="elemList">Supprimer</li>
                 </ul>
             </div>
             
         </div>
     </div>
+    <pagination-controls id="gallery" (pageChange)="pageChanged($event)"></pagination-controls>
 </div>

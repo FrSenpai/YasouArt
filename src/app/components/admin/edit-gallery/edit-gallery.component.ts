@@ -9,10 +9,20 @@ import { IllustrationsService } from 'src/app/services/illustrations.service';
 })
 export class EditGalleryComponent implements OnInit {
   galleryItems$: Observable<any>
+  configPagination:any;
   constructor(private illustrationsService: IllustrationsService) { }
 
   ngOnInit(): void {
     this.galleryItems$ = this.illustrationsService.getAllIllustrations();
+    this.configPagination = {
+			itemsPerPage: 10,
+			currentPage: 1,
+			id: "gallery",
+		};
+  }
+
+  public pageChanged(event): void {
+		this.configPagination.currentPage = event;
   }
 
 

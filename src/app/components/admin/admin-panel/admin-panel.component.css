@@ -53,6 +53,10 @@ h1 {
   font-size: 20px;
 }
 
+.ctnBoxAdmin {
+  width: 100%;
+}
+
 @media screen and (max-width: 950px) {
   #adminNav {
     display: flex;
