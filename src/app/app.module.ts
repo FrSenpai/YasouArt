@@ -22,6 +22,7 @@ import { LoginAdminComponent } from './components/admin/login-admin/login-admin.
 import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.component';
 import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
 import { EditGalleryComponent } from './components/admin/edit-gallery/edit-gallery.component';
+import { EditIllustrationComponent } from './components/admin/edit-illustration/edit-illustration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { EditGalleryComponent } from './components/admin/edit-gallery/edit-galle
     ContactComponent,
     LoginAdminComponent,
     AdminPanelComponent,
-    EditGalleryComponent
+    EditGalleryComponent,
+    EditIllustrationComponent
   ],
   imports: [
     BrowserModule,

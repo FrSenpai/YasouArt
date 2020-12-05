@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { IllustrationsService } from 'src/app/services/illustrations.service';
 
@@ -10,7 +11,7 @@ import { IllustrationsService } from 'src/app/services/illustrations.service';
 export class EditGalleryComponent implements OnInit {
   galleryItems$: Observable<any>
   configPagination:any;
-  constructor(private illustrationsService: IllustrationsService) { }
+  constructor(private illustrationsService: IllustrationsService, public route: Router) { }
 
   ngOnInit(): void {
     this.galleryItems$ = this.illustrationsService.getAllIllustrations();
@@ -25,5 +26,12 @@ export class EditGalleryComponent implements OnInit {
 		this.configPagination.currentPage = event;
   }
 
+  public deleteItem(id) {
+    this.illustrationsService.deleteIllustration(id).then((result)=> {
+      console.log(result)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
 
 }
