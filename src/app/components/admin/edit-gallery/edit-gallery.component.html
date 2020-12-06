@@ -11,7 +11,7 @@
                 <p class="descContent"> {{item.description}} </p>
                 <ul class="listAdmin">
                     <li class="elemList" (click)="this.route.navigateByUrl('illustration/' + item.id)">Voir +</li>
-                    <li class="elemList">Editer</li>
+                    <li class="elemList" (click)="this.route.navigateByUrl('editIllustration/' + item.id)">Editer</li>
                     <li class="elemList" (click)="this.deleteItem(item.id)">Supprimer</li>
                 </ul>
             </div>

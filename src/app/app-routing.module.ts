@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.component';
+import { EditIllustrationComponent } from './components/admin/edit-illustration/edit-illustration.component';
 import { LoginAdminComponent } from './components/admin/login-admin/login-admin.component';
 import { AllIllustrationsComponent } from './components/user/all-illustrations/all-illustrations.component';
 import { BiographieComponent } from './components/user/biographie/biographie.component';
@@ -44,6 +45,11 @@ const routes: Routes = [
     path: "adminPanel",
     component: AdminPanelComponent,
     canActivate: [AdminGuard]
+  },
+  {
+    path: "editIllustration/:id",
+    component: EditIllustrationComponent,
+    canActivate:[AdminGuard]
   }
 
 ];

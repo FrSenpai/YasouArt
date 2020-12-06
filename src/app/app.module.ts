@@ -23,6 +23,8 @@ import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.
 import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
 import { EditGalleryComponent } from './components/admin/edit-gallery/edit-gallery.component';
 import { EditIllustrationComponent } from './components/admin/edit-illustration/edit-illustration.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +51,7 @@ import { EditIllustrationComponent } from './components/admin/edit-illustration/
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(), // ToastrModule added
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
