@@ -1,0 +1,35 @@
+<div id="ctnAllBox">
+  <div *ngIf="this.illustrationItem | async" class="ctnBox">
+    <h2>Edition d'une illustration</h2>
+    <form [formGroup]="editItem">
+      <div class="ctnElemForm">
+        <label for="title">Titre :</label>
+        <input type="text" name="title" formControlName="title" >
+      </div>
+
+      <div class="ctnElemForm">
+        <label for="desc">Description :</label>
+        <editor apiKey="n0zjjp855koo6c45xxa86ptqybm4b9eakycd7lrnyr7nrcd2" formControlName="desc"  [init]="{plugins: 'link, emoticons', height: 400,
+        toolbar: 'undo redo | styleselect | forecolor | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image | code |emoticons'}"></editor>
+      </div>
+
+      <div class="ctnElemForm">
+        <label for="urlImage">Lien de l'image :</label>
+        <input type="text" name="urlImage" formControlName="url_image">
+      </div>
+      <button id="btnSave">Sauvegarder</button>
+    </form>
+  </div>
+ <!-- TODO : Faire un component pour afficher une illustration unique -->
+  <div class="ctnBox" *ngIf="this.illustrationItem">
+    <h3>Prévisualisation de l'illustration</h3>
+    <div
+      [ngStyle]="{'background-image': 'url('+ editItem.value.url_image+')'}" id="ctnPreviewIllustration">
+      <div id="ctnDataIllustration">
+        <h4>{{editItem.value.title}}</h4>
+        <p id="descriptionIllustration">{{editItem.value.desc}}</p>
+        <button id="btnSeeMore">En voir plus</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -40,5 +40,9 @@ export class IllustrationsService {
     })
   }
 
+  deleteIllustration(id): Promise<any> {
+    return this.firestore.collection('Illustrations').doc(id).delete()
+  }
+
 
 }

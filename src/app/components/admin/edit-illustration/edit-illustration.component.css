@@ -1,0 +1,112 @@
+#ctnAllBox {
+    margin-bottom: 120px;
+}
+
+.ctnBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 20px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+h2, h3 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+form {
+    width: 90%;
+}
+
+#ctnPreviewIllustration {
+    width: 20%;
+    min-width: 400px;
+    max-width: 800px;
+    height: 400px;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+    overflow: hidden;
+  }
+
+  editor {
+      width: 100%;
+  }
+
+  input {
+      width: 50%;
+      height: 25px;
+  }
+
+
+  #ctnDataIllustration {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 7px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    width: 100%;
+  }
+
+  .ctnElemForm {
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  }
+
+  label {
+      margin-bottom: 5px;
+  }
+
+  #btnSave {
+    background-color: rgb(43, 41, 41);
+    border: 1px rgba(0, 0, 0, 0.65) solid;
+    border-radius: 8px;
+    padding: 7px 10px 7px 10px;
+    color: whitesmoke;
+    align-self: center;
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+
+  #descriptionIllustration {
+    margin: 0;
+    margin-top: 8px;
+    height: 60px;
+    overflow: hidden;
+  }
+
+  #btnSeeMore {
+    background-color: rgb(43, 41, 41);
+    border: 1px rgba(0, 0, 0, 0.65) solid;
+    border-radius: 8px;
+    padding: 7px 10px 7px 10px;
+    color: whitesmoke;
+    align-self: center;
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }

@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+    width: 100%;
 }
 
 #ctnAllItems {
@@ -15,6 +16,10 @@
     flex-wrap: wrap;
 }
 
+h2 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
 #addItem {
     width: 250px;
     height: 400px;
@@ -22,26 +27,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    background-color: rgba(94, 93, 94, 0.253);
+    border: 2px dashed #6B4E71;
+    background-color: rgba(216, 191, 216, 0.3);
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
 }
 
 #addItem:hover {
-    background-color: #bbbbbb;
+    background-color: rgba(216, 191, 216, 0.644);
+    border: 2px solid #6B4E71;
 }
 
-.fa-plus-circle {
+
+.fa-plus-square {
     text-align: center;
-    font-size: 80px;
+    font-size: 70px;
+    color: #6B4E71;
 }
 
-.fa-plus-circle:hover {
-    color: silver;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+.fa-plus-square:hover {
+
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .item {
@@ -62,16 +70,42 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.60);
+    color: whitesmoke;
+    border-radius: 8px;
 }
 
 .ctnContent:hover {
     opacity: 1;
 }
 
+.descContent {
+    margin: 0;
+    height: 250px;
+    margin: 10px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.elemList:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .listAdmin {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     align-self: flex-end;
+    list-style: none;
+    width: 100%;
+    height: 30px;
+    border-top: 1px solid whitesmoke;
+    margin: 0;
+    padding:0;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.70);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }

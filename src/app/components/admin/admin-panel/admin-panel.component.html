@@ -15,7 +15,7 @@
     </div>
     <div class="ctnElemNav">
       <i class="far fa-envelope"></i>
-      <li class="elemAdminNav">Message(s) privé(s) : </li>
+      <li class="elemAdminNav">Message(s) privé(s) : <span *ngIf="this.privateMessage$ | async;let nbPm"> {{nbPm.length}} </span> </li>
     </div>
     <div class="ctnElemNav">
       <i class="fas fa-sign-out-alt"></i>
@@ -23,7 +23,7 @@
     </div>
 
   </ul>
-  <div *ngIf="selectorNav === 'gallery'">
+  <div class="ctnBoxAdmin" *ngIf="selectorNav === 'gallery'">
     <app-edit-gallery></app-edit-gallery>
   </div>
   <div *ngIf="selectorNav === 'aboutMe'">
