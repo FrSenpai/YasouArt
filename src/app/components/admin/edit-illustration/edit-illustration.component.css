@@ -94,9 +94,15 @@ form {
 
   #descriptionIllustration {
     margin: 0;
-    margin-top: 8px;
     height: 60px;
     overflow: hidden;
+    width: 100%;
+  }
+
+  p {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
   }
 
   #btnSeeMore {
