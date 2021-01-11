@@ -33,7 +33,7 @@ export class EditIllustrationComponent implements OnInit, OnDestroy {
     } else {
       this.route.navigateByUrl("/home");
     }
-    
+    //TODO : 
   }
 
   public initForm():void {
